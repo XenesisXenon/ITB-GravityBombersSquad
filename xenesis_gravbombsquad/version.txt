@@ -1,67 +1,72 @@
 --Version Notes--
+WIP8:
+•Fixes to be compatible with the new version of Into The Breach (1.2.21) and the Mod Loader (2.5.1). These are now the minimum versions for the releases of this mod going forward, and for compatibility/bug reporting.
+•Added Mod Icon
+•Added Squad Icon
+
 WIP7:
--Fixed the description for Passive: Amplifier Field (thanks Loss)
+•Fixed the description for Passive: Amplifier Field (thanks Loss)
 
 WIP6:
--Altered the Mech-Launcher upgrade "Vertical Shot" to allow for Range 1 targeting as well.
+•Altered the Mech-Launcher upgrade "Vertical Shot" to allow for Range 1 targeting as well.
 
 WIP5:
--Squad art by Rithaniel!
+•Squad art by Rithaniel!
 
--Removed another two game-crashing bugs related to the passive
--Updated Mech-Launcher Skill Effect - Now has a reverse push at target point
--Updated Mech-Launcher Skill Effect - Self Damage is 1 from 0
--Altered the Mech-Launcher upgrade to "Vertical Shot" from "Fire"
+•Removed another two game-crashing bugs related to the passive
+•Updated Mech-Launcher Skill Effect - Now has a reverse push at target point
+•Updated Mech-Launcher Skill Effect - Self Damage is 1 from 0
+•Altered the Mech-Launcher upgrade to "Vertical Shot" from "Fire"
 	Vertical Shot:
 	-Allows targeting self
 	-Self Damage +1 on self-target
 	-Damage -1 on self-target
 	-Hits in a + shape around the mech
 	
--Altered the Prime Throw upgrade to "Damage Tuning" from "Ally & Range"
+•Altered the Prime Throw upgrade to "Damage Tuning" from "Ally & Range"
 	Damage Tuning:
 	-Minimum Throw & Explosion damage increased by 1
 	-Ally Damage reduced to 1 when thrown and 0 for the explosion
 	
--Updated Recall Teleporter base cost to 0 cores from 1 core
--Altered Recall Teleporter Skill Effect
+•Updated Recall Teleporter base cost to 0 cores from 1 core
+•Altered Recall Teleporter Skill Effect
 	Standard:
 	-Can teleport in radius 2 in any direction
 	-Can teleport adjacent to allied units from any distance along straight lines
 	-Can now teleport to all allied units, not just mechs
 	-Pulls target behind start position forward
 	-Repairs 1 damage on unit
--Added Recall Teleporter upgrade "Patch-Up"
+•Added Recall Teleporter upgrade "Patch-Up"
 	Patch Up (1 core):
 	-Allied units adjacent to target tiles are repaired for 1 health
 	-Self-repair increased to 2 health from 1 health
 	
--Updated animations for Prime Throw, Mech-Launcher and Recall Teleporter
--Altered the Passive: Dampening Field upgrade "-1 Damage" to cost 2 cores from 3 cores
--Added Passive: Amplifier Field
--Added Passive: Regeneration Field
--Greatly improved Field drawing function
+•Updated animations for Prime Throw, Mech-Launcher and Recall Teleporter
+•Altered the Passive: Dampening Field upgrade "-1 Damage" to cost 2 cores from 3 cores
+•Added Passive: Amplifier Field
+•Added Passive: Regeneration Field
+•Greatly improved Field drawing function
 
 WIP4:
--Removed a game-crashing bug related to the passive
+•Removed a game-crashing bug related to the passive
 
 WIP3:
--Updated Recall Teleporter weapon design and upgrades
--Updated Mech-Launcher Upgrades
--Updated Animations, Descs and Tip Images for Prime Throw, Mech-Launcher and Recall Teleporter
--Removed Push Teleporter
--Added new Passive: Dampening Field
--Added Weapon icons for all weapons
--Added Tile icon for passive
--Added Shop options for all weapons
--Updated Crush Mech's HP to 3 from 2
--Updated Recall Mech's movement to 4 from 3
--Added preliminary Achievement Support
+•Updated Recall Teleporter weapon design and upgrades
+•Updated Mech-Launcher Upgrades
+•Updated Animations, Descs and Tip Images for Prime Throw, Mech-Launcher and Recall Teleporter
+•Removed Push Teleporter
+•Added new Passive: Dampening Field
+•Added Weapon icons for all weapons
+•Added Tile icon for passive
+•Added Shop options for all weapons
+•Updated Crush Mech's HP to 3 from 2
+•Updated Recall Mech's movement to 4 from 3
+•Added preliminary Achievement Support
 
 WIP2:
--Updated Prime Throw logic
--Updated Prime Throw Upgrades
--Changed icons and colours
+•Updated Prime Throw logic
+•Updated Prime Throw Upgrades
+•Changed icons and colours
 
 WIP1:
--Initial Release.
+•Initial Release.

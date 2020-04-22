@@ -3,8 +3,8 @@
 local mod = {
 	id = "xen_GravBombers",
 	name = "Gravity Bombers Squad",
-	version = "WIP7",
-	modApiVersion = "2.4.1",
+	version = "WIP8",
+	modApiVersion = "2.5.1",
 	icon = "img/mod_icon.png",
 	requirements = {}
 }
@@ -155,7 +155,7 @@ function mod:load(options, version)
 	}, 
 		"Gravity Bombers", 
 		"This squad throws thousands of tonnes of metal and vek skywards...and gravity does the rest.", 
-		self.resourcePath .. "img/mod_icon.png"
+		self.resourcePath .. "img/mod_icon2.png"
 	)
 	
 	require(self.scriptPath .."shop"):load(options)

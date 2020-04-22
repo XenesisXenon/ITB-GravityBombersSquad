@@ -25,7 +25,6 @@ xen_Prime_Yeet = Skill:new{
 	Upgrades = 2,
 	AllyDamage = 0,
 	BuildingDamage = true,
-	UpgradeList = {"Damage Tuning","Building & Range"},
 	UpgradeCost = {2,2},
 	Range = 3,
 	LaunchSound = "/weapons/shift",
@@ -134,6 +133,9 @@ xen_Prime_Yeet_AB = xen_Prime_Yeet:new{
 	BuildingDamage = false,
 }
 
+Weapon_Texts.xen_Prime_Yeet_Upgrade1 = "Damage Tuning"
+Weapon_Texts.xen_Prime_Yeet_Upgrade2 = "Building & Range"
+
 --Recall Teleport (Science)--
 xen_Science_RecallTeleporter = Skill:new{
 	Name = "Recall Teleporter",
@@ -148,7 +150,6 @@ xen_Science_RecallTeleporter = Skill:new{
 	Acid = false,
 	PowerCost = 0,
 	Upgrades = 2,
-	UpgradeList = { "Patch-Up", "A.C.I.D. Explosion" },
 	UpgradeCost = { 1, 2 },
 	LaunchSound = "/weapons/swap",
 	Animation = "ExploRepulse1",
@@ -164,6 +165,7 @@ xen_Science_RecallTeleporter = Skill:new{
 		Friendly2_Damaged = Point(1,3),
 		}	
 }
+
 function xen_Science_RecallTeleporter:GetTargetArea(point)
 	local ret = PointList()
 	
@@ -262,6 +264,9 @@ xen_Science_RecallTeleporter_AB = xen_Science_RecallTeleporter:new{
 	Acid = true,
 }
 
+Weapon_Texts.xen_Science_RecallTeleporter_Upgrade1 = "Patch-Up"
+Weapon_Texts.xen_Science_RecallTeleporter_Upgrade2 = "A.C.I.D. Explosion"
+
 --Crush Artillery (Ranged)
 xen_Ranged_CrushArtillery =	Leap_Attack:new{
 	Name = "Mech-Launcher",
@@ -279,7 +284,6 @@ xen_Ranged_CrushArtillery =	Leap_Attack:new{
 	PowerCost = 1,
 	Upgrades = 2,
 	UpgradeCost = {1,2},
-	UpgradeList = { "Vertical Shot", "+1 Damage & Push" },
 	LaunchSound = "/weapons/artillery_volley",
 	ImpactSound = "/impact/generic/explosion",
 	TipImage = {
@@ -421,10 +425,6 @@ function xen_Ranged_CrushArtillery:GetSkillEffect(p1, p2)
 	
 end
 
--- xen_Ranged_CrushArtillery_A = xen_Ranged_CrushArtillery:new{
-	-- Fire = true,
-	-- UpgradeDescription = "Burn the target."
--- }
 xen_Ranged_CrushArtillery_A = xen_Ranged_CrushArtillery:new{
 	Vertical = true,
 	MinRange = 1,
@@ -463,6 +463,10 @@ xen_Ranged_CrushArtillery_AB = xen_Ranged_CrushArtillery:new{
 	}
 }
 
+Weapon_Texts.xen_Ranged_CrushArtillery_Upgrade1 = "Vertical Shot"
+Weapon_Texts.xen_Ranged_CrushArtillery_Upgrade2 = "+1 Damage & Push"
+
+--Nullification Zone (Passive)--
 xen_Passive_NullZone = PassiveSkill:new{
 	Name = "Dampening Field",
 	Description = "Generates a field that reduces damage from all attacks started from inside it.",
@@ -471,7 +475,6 @@ xen_Passive_NullZone = PassiveSkill:new{
 	Icon = "weapons/xen_weapon_passive_nullzone.png",
 	Upgrades = 2,
 	UpgradeCost = {1,2},
-	UpgradeList = { "-1 Damage", "-1 Damage"},
 	Damage = -1,
 	TipImage = {
 		Unit = Point(2,2),
@@ -537,6 +540,10 @@ xen_Passive_NullZone_AB = xen_Passive_NullZone:new{
 	Passive = "Dampening_Field_AB"
 }
 
+Weapon_Texts.xen_Passive_NullZone_Upgrade1 = "-1 Damage"
+Weapon_Texts.xen_Passive_NullZone_Upgrade2 = "-1 Damage"
+
+--Amplifier Zone (Passive)--
 xen_Passive_AmpZone = PassiveSkill:new{
 	Name = "Amplifier Field",
 	Description = "Generates a field that increases damage from all attacks started from inside it.",
@@ -545,7 +552,6 @@ xen_Passive_AmpZone = PassiveSkill:new{
 	Icon = "weapons/xen_weapon_passive_ampzone.png",
 	Upgrades = 1,
 	UpgradeCost = {3},
-	UpgradeList = { "+1 Damage" },
 	Damage = 1,
 	TipImage = {
 		Unit = Point(2,2),
@@ -611,7 +617,9 @@ xen_Passive_AmpZone_AB = xen_Passive_AmpZone:new{
 	Passive = "Amplifier_Field_AB"
 }
 
+Weapon_Texts.xen_Passive_AmpZone_Upgrade1 = "+1 Damage"
 
+--Regeneration Zone (Passive)--
 xen_Passive_RepairZone = PassiveSkill:new{
 	Name = "Regeneration Field",
 	Description = "Generates a field that repairs all units inside of it.",
@@ -623,7 +631,6 @@ xen_Passive_RepairZone = PassiveSkill:new{
 	HealEnemy = true,
 	Upgrades = 2,
 	UpgradeCost = {1,1},
-	UpgradeList = { "Allies Only" , "+1 Repair" },
 	TipImage = {
 		Unit_Damaged = Point(2,2),
 		Friendly_Damaged = Point(2,1),
@@ -636,6 +643,7 @@ xen_Passive_RepairZone = PassiveSkill:new{
 		Target = Point(2,2),
 	}
 }
+
 function xen_Passive_RepairZone:GetSkillEffect(p1, p2)
 	--For the tipimage only
 	local ret = SkillEffect()
@@ -686,6 +694,9 @@ xen_Passive_RepairZone_AB = xen_Passive_RepairZone:new{
 	Repair = -2,
 	Passive = "Repair_Field_AB"
 }
+
+Weapon_Texts.xen_Passive_RepairZone_Upgrade1 = "Allies Only"
+Weapon_Texts.xen_Passive_RepairZone_Upgrade2 = "+1 Repair"
 
 ---ZONE TOOLTIPS AND MARK ICONS---
 TILE_TOOLTIPS["null_zone"] = { "Dampening Field (-1)", "Units that attack from this space will do 1 less damage." }
