@@ -3,8 +3,8 @@
 local mod = {
 	id = "xen_GravBombers",
 	name = "Gravity Bombers Squad",
-	version = "WIP8",
-	modApiVersion = "2.5.1",
+	version = "WIP9",
+	modApiVersion = "2.5.4",
 	icon = "img/mod_icon.png",
 	requirements = {}
 }

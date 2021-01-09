@@ -801,8 +801,8 @@ end
 
 local function Create_AmpZone(mission)
 	if not mission then return end
-	if IsTestMechScenario() or IsTipImage() then return end
-	
+	if IsTestMechScenario() then return end
+	if IsTipImage() then return end
 	local zone = {}
 	local strength = 0
 		
@@ -906,15 +906,18 @@ end
 ---APPLY ZONE EFFECTS---
 local function NullZone_Effect(pawn,se,p1,p2)
 	if IsTipImage() or IsTestMechScenario() then return end
-	
 	local weps = {"primary","secondary"}
 	local modUtils = getModUtils()
 	local mission = GetCurrentMission()
+	--Testing
+	LOG(mission)
+	--Testing	
 	if not mission then return end
 	if mission.xen_NullZone_Strength == 0 then return end --Don't run if no passive setup
 	local strength = mission.xen_NullZone_Strength
 	
 	local zone = mission.xen_NullZone_Tiles
+	if not zone then return end
 	--LOG("Zone:".. save_table(zone))
 	local active = false
 	for i, point in pairs(zone) do
@@ -944,6 +947,8 @@ local function NullZone_Effect(pawn,se,p1,p2)
 end
 
 local function AmpZone_Effect(pawn,se,p1,p2)
+	--TESTING
+	--TESTING
 	if IsTipImage() or IsTestMechScenario() then return end
 	
 	local weps = {"primary","secondary"}
@@ -954,6 +959,7 @@ local function AmpZone_Effect(pawn,se,p1,p2)
 	local strength = mission.xen_AmpZone_Strength
 	
 	local zone = mission.xen_AmpZone_Tiles
+	if not zone then return end
 	local active = false
 	for i, point in pairs(zone) do
 		if point == p1 then
@@ -1165,7 +1171,7 @@ end
 
 function this:load(modApiExt)
 	local this = self
-    local modUtils = getModUtils()	
+	local modUtils = getModUtils()	
 	
 	modApi:addMissionStartHook(function(mission)
 		ClearMissionData(mission)
