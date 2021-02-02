@@ -70,7 +70,6 @@ function xen_Prime_Yeet:GetSkillEffect(p1, p2)
 	ret:AddLeap(move, FULL_DELAY)
 	
 	local distance = p1:Manhattan(p2)
-	--LOG(distance)
 
 	local centre = SpaceDamage(p2,self.MinDamage + math.floor((distance / 2 )))
 	if Board:IsPawnTeam(p1-DIR_VECTORS[direction],TEAM_PLAYER) then
@@ -909,16 +908,13 @@ local function NullZone_Effect(pawn,se,p1,p2)
 	local weps = {"primary","secondary"}
 	local modUtils = getModUtils()
 	local mission = GetCurrentMission()
-	--Testing
-	LOG(mission)
-	--Testing	
+	
 	if not mission then return end
 	if mission.xen_NullZone_Strength == 0 then return end --Don't run if no passive setup
 	local strength = mission.xen_NullZone_Strength
 	
 	local zone = mission.xen_NullZone_Tiles
 	if not zone then return end
-	--LOG("Zone:".. save_table(zone))
 	local active = false
 	for i, point in pairs(zone) do
 		if point == p1 then
@@ -1060,7 +1056,6 @@ local function MultiZone_Mark()
 		end
 	end
 	
-	--LOG(save_table(zone))	
 	--Mark tiles
 	local markdesc = {
 		[-3] = "null_zone3",
@@ -1137,7 +1132,6 @@ local function MultiZone_Mark()
 						repair = repair * -10
 					end
 					local index = strength + repair
-					--LOG(index)
 					local colour = markcolour[index]
 					Board:MarkSpaceImage(curr, markimage[index], GL_Color(colour[1],colour[2],colour[3]))
 					Board:MarkSpaceDesc(curr, markdesc[index])					
